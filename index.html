@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>11 Match</title>
+  <title>11 MATCH</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
@@ -17,7 +17,13 @@
   <div class="nav-container">
     <img src="images/LOGO_FOND_W750.png" class="logo">
 
-    <nav>
+    <div class="mobile-title">11 MATCH</div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <nav id="mobileMenu">
       <a href="#hero">Accueil</a>
       <a href="#mode11">11 Type</a>
       <a href="#carriere">Carrière</a>
@@ -41,14 +47,17 @@
   </p>
   
   <p class="description">
-    Pensez-vous vraiment connaître le football ?<br>
-    Ici, pas de questions faciles. Pas de hasard.<br>
-    Seulement votre mémoire, votre rapidité… et votre niveau réel.
+  Ici, pas de hasard. Pas de questions faciles.<br>
+  Seulement ta mémoire, ta rapidité… et ton vrai niveau.
+  </p>
+
+  <p class="description">
+  Joue en solo pour battre tes records ou affronte tes amis en équipe dans des duels intenses.
   </p>
   
   <p class="description">
-    11 MATCH met au défi les fans les plus pointus.<br>
-    Retrouvez des compositions d’équipes historiques, identifiez des joueurs à partir de leur carrière… et prouvez que vous maîtrisez vraiment le football.
+  Retrouve des compositions d’équipes historiques, identifie des joueurs à partir de leur carrière<br>
+  et prouve que tu maîtrises vraiment le football.
   </p>
 
   <a href="#" class="btn">
@@ -64,10 +73,11 @@
 
         <div class="carousel-container">
           <div class="carousel" id="carousel">
-            <img src="images/screenshot3.png">
+            <img src="images/screenshot4.png">
             <img src="images/screenshot5_60s.png">
             <img src="images/screenshot7.png">
             <img src="images/screenshot9.png">
+            <img src="images/screenshot12.png">
             <img src="images/screenshot11.png">
           </div>
         </div>
@@ -84,43 +94,70 @@
 
 <!-- MODE 11 -->
 <section id="mode11" class="section">
+
   <div class="section-box">
-    
-    <div class="section-content"> <!-- 👈 NE PAS FERMER ICI -->
 
+    <div class="section-content">
+
+      <!-- TEXTE -->
       <div class="section-text">
+
         <h2>11 Type</h2>
-        <p>
-          Devinez la composition des 11 titulaires lors de matchs historiques du football.<br>
-          Vous disposez de 60 secondes pour retrouver l’ensemble des joueurs alignés au coup d’envoi.<br>
-          Des affiches marquantes de Ligue des Champions ou de Ligue 1 vous attendent, des années 90 à aujourd’hui.<br>
-          Aucun indice superflu : seule votre mémoire fera la différence.<br>
-          Chaque bonne réponse vous rapproche du sans-faute, chaque erreur vous fait perdre un temps précieux.<br>
-          Serez-vous capable de reconstituer ces équipes mythiques sous pression ?<br>
-          Un défi exigeant réservé aux vrais passionnés de football.
+
+        <p class="section-subtitle">
+          Reconstitue les équipes mythiques du football.
         </p>
+
+        <ul class="section-list">
+          <li>60 secondes pour retrouver les 11 titulaires</li>
+          <li>200 Matchs légendaires de Ligue des Champions et Ligue 1</li>
+          <li>Des années 90 à aujourd’hui</li>
+          <li>Aucun indice : seule ta mémoire compte</li>
+          <li>Chaque erreur te fait perdre un temps précieux</li>
+        </ul>
+
+        <p class="section-highlight">
+          Un défi exigeant réservé aux vrais passionnés.
+        </p>
+
       </div>
 
-      <div class="section-carousel-wrapper"> <!-- 👈 NOUVEAU -->
+      <!-- MEDIA -->
+      <div class="section-media">
 
-        <button class="arrow left" onclick="scrollSectionCarousel(-1)">‹</button>
-
-        <div class="section-carousel-container">
-
-          <div class="section-carousel" id="sectionCarousel">
-            <img src="images/mode11_1.png">
-            <img src="images/mode11_2.png">
-            <img src="images/mode11_3.png">
-            <img src="images/mode11_4.png">
-          </div>
+        <!-- Desktop -->
+        <div class="desktop-shots">
+          <img src="images/mode11_4.png">
+          <img src="images/mode11_5.png">
         </div>
-        <button class="arrow right" onclick="scrollSectionCarousel(1)">›</button>
+
+        <!-- Mobile / tablette -->
+        <div class="mobile-carousel">
+
+          <button class="arrow left" onclick="scrollSectionCarousel(-1)">‹</button>
+
+            <div class="section-carousel-container">
+
+              <div class="section-carousel" id="sectionCarousel">
+                <img src="images/mode11_1.png">
+                <img src="images/mode11_2.png">
+                <img src="images/mode11_3.png">
+                <img src="images/mode11_4.png">
+                <img src="images/mode11_5.png">
+              </div>
+
+            </div>
+
+          <button class="arrow right" onclick="scrollSectionCarousel(1)">›</button>
+
+        </div>
 
       </div>
 
-    </div> <!-- 👈 fermeture ici -->
+    </div>
 
   </div>
+
 </section>
 
 <!-- CARRIERE -->
@@ -129,39 +166,60 @@
     
     <div class="section-content">
 
-      <!-- CAROUSEL (GAUCHE) -->
-      <div class="section-carousel-wrapper">
-
-        <button class="arrow left" onclick="scrollSectionCarousel2(-1)">‹</button>
-
-        <div class="section-carousel-container">
-          <div class="section-carousel" id="sectionCarousel2">
-            <img src="images/modecarriere_1.png">
-            <img src="images/modecarriere_2.png">
-            <img src="images/modecarriere_3.png">
-            <img src="images/modecarriere_4.png">
-            <img src="images/modecarriere_5.png">
-            <img src="images/modecarriere_6.png">
-          </div>
-        </div>
-
-        <button class="arrow right" onclick="scrollSectionCarousel2(1)">›</button>
-
-      </div>
-
-      <!-- TEXTE (DROITE) -->
+      <!-- TEXTE -->
       <div class="section-text">
 
         <h2>Carrière</h2>
 
-        <p>
-          Identifiez un joueur à partir de son parcours professionnel.<br>
-          Vous disposez de 45 secondes pour retrouver son identité en analysant les clubs dans lesquels il a évolué ainsi que sa nationalité.<br>
-          Chaque indice compte, mais seul votre sens du détail fera la différence.<br>
-          Plus vous trouvez rapidement, plus vous marquez de points.<br>
-          Saurez-vous reconnaître les plus grands joueurs à travers leur carrière ?<br>
-          Un mode rapide, stratégique et redoutablement efficace.
+        <p class="section-subtitle">
+          Reconnais un joueur à travers son parcours.
         </p>
+
+        <ul class="section-list">
+          <li>Plus de 600 joueurs</li>
+          <li>45 secondes pour trouver le joueur</li>
+          <li>Analyse ses clubs et sa nationalité</li>
+          <li>Plus tu réponds vite, plus tu marques de points</li>
+          <li>Des carrières mythiques aux parcours plus discrets</li>
+          <li>Chaque détail peut faire la différence</li>
+        </ul>
+
+        <p class="section-highlight">
+          Un mode rapide, stratégique et redoutable.
+        </p>
+
+      </div>
+
+      <!-- MEDIA -->
+      <div class="section-media">
+
+        <!-- Desktop -->
+        <div class="desktop-shots">
+          <img src="images/modecarriere_3.png">
+          <img src="images/modecarriere_5.png">
+        </div>
+
+        <!-- Tablette / mobile -->
+        <div class="mobile-carousel">
+
+          <button class="arrow left" onclick="scrollSectionCarousel2(-1)">‹</button>
+
+          <div class="section-carousel-container">
+            <div class="section-carousel" id="sectionCarousel2">
+
+              <img src="images/modecarriere_1.png">
+              <img src="images/modecarriere_2.png">
+              <img src="images/modecarriere_3.png">
+              <img src="images/modecarriere_4.png">
+              <img src="images/modecarriere_5.png">
+              <img src="images/modecarriere_6.png">
+
+            </div>
+          </div>
+
+          <button class="arrow right" onclick="scrollSectionCarousel2(1)">›</button>
+
+        </div>
 
       </div>
 
@@ -174,7 +232,7 @@
 <section id="regles" class="section">
   <div class="section-box">
 
-    <h2 class="section-title">Comment jouer ?</h2>
+    <h2 class="section-title">Comment jouer à plusieurs ?</h2>
 
     <div class="rules-gallery">
       <img src="images/rules1.png">
@@ -270,6 +328,13 @@ function scrollSectionCarousel2(direction) {
   </div>
 
 </footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+}
+</script>
 
 </body>
 </html>

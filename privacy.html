@@ -11,19 +11,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+}
+</script>
+
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-container">
+
     <img src="images/LOGO_FOND_W750.png" class="logo">
 
-    <nav>
+    <div class="mobile-title">11 MATCH</div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <nav id="mobileMenu">
       <a href="index.html">Accueil</a>
       <a href="index.html#mode11">11 Type</a>
       <a href="index.html#carriere">Carrière</a>
       <a href="index.html#regles">Règles</a>
     </nav>
+
   </div>
 </header>
 
